@@ -1,0 +1,20 @@
+
+git config --global user.name "RTCTeam"
+git config --global user.email "tareksherif.courses@gmail.com"
+
+git checkout -b origin
+git init
+git checkout master
+git add .
+git commit -m  train_set
+git remote add origin https://RTCTeam:RTC_Team_2020@github.com/RTCTeam/quran-asr-challenge.git
+git push -u  --force origin master 
+ 
+# delete branch if exist 
+git branch -d train_set  --force
+git push origin --delete train_set  --force
+
+# create branch
+git checkout -b  train_set
+git commit -m  rmtrain_set
+git push origin train_set
